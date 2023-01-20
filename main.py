@@ -4,7 +4,6 @@ from tweepy import OAuthHandler
 import wordcloud
 import re
 import matplotlib.pyplot as plt
-nltk.download('punkt')
 
 #get Input from user, keyword, consumerKey, consumerSecret, accessToken, accessSecret and bearerToken
 def getInput():
@@ -33,7 +32,7 @@ def loadApi(consumer_key, consumer_secret, access_token, access_secret):
     return tweepy.API(auth)
 
 def getTweets(api,keyword):
-    tweets = tweepy.Cursor(api.search_tweets, q=keyword, lang="en",tweet_mode='extended',count=100).items(10)
+    tweets = tweepy.Cursor(api.search_tweets, q=keyword, lang="en",tweet_mode='extended').items(10)
     list_tweets = [tweet for tweet in tweets]
     tweet_data = []
     for tweet in list_tweets:
