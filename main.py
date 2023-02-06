@@ -5,17 +5,14 @@ import wordcloud
 import re
 import matplotlib.pyplot as plt
 
-#get Input from user, keyword, consumerKey, consumerSecret, accessToken, accessSecret and bearerToken
+#get Input from user, keyword, consumerKey, consumerSecret, accessToken and accessSecret
 def getInput():
     keyword = input("Enter the keyword you want to search: ")
     consumer_key = input('Enter your Consumer Key: ')
     consumer_secret = input('Enter your Consumer Secret: ')
     access_token = input('Enter your Access Token: ')
     access_secret = input('Enter your Access Secret: ')
-    #consumer_key = 'VfK92Z4a2wL3JMw3ueTpCk8tY'
-    #consumer_secret = 'uF0EY7MVmliEKPOtalIqlN1PpvTKgxoMIV9XEaQk70CTanX8Sz'
-    #access_token = '1354464657650708490-pTuMK61JAKi6Lja85bjXs7h3IwcM8w'
-    #access_secret = 'ME5w2wB6DbbJ4YObLs9n3529yPjOMTwJEuBCKevzXe0fa'
+    
     return keyword, consumer_key, consumer_secret, access_token, access_secret
 
 def stopWordLst():
